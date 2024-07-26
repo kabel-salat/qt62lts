@@ -1,0 +1,13 @@
+diff --git a/cmake/FindWrapVulkanHeaders.cmake b/cmake/FindWrapVulkanHeaders.cmake
+index ac2c912a56..83de341046 100644
+--- a/cmake/FindWrapVulkanHeaders.cmake
++++ b/cmake/FindWrapVulkanHeaders.cmake
+@@ -27,7 +27,7 @@ if(Vulkan_INCLUDE_DIR)
+     # Also propagate MoltenVK include directory on Apple platforms if found.
+     if(APPLE)
+         # Check for the LunarG Vulkan SDK folder structure.
+-        set(__qt_molten_vk_include_path "${Vulkan_INCLUDE_DIR}/../../MoltenVK/include")
++        set(__qt_molten_vk_include_path "${Vulkan_INCLUDE_DIR}/../../molten-vk/include")
+         get_filename_component(
+             __qt_molten_vk_include_path
+             "${__qt_molten_vk_include_path}" ABSOLUTE)

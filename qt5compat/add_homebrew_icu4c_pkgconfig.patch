@@ -1,0 +1,15 @@
+diff --git a/src/core5/configure.cmake b/src/core5/configure.cmake
+index 246de79..d0ac3a2 100644
+--- a/src/core5/configure.cmake
++++ b/src/core5/configure.cmake
+@@ -7,6 +7,10 @@
+ #### Libraries
+ # special case begin
+ if(NOT TARGET ICU::i18n)
++    # Homebrew icu4c
++    if(APPLE)
++        set(ENV{PKG_CONFIG_PATH} "/usr/local/opt/icu4c/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}")
++    endif()
+     qt_find_package(ICU COMPONENTS i18n uc data PROVIDED_TARGETS ICU::i18n ICU::uc ICU::data MODULE_NAME qt5compat QMAKE_LIB icu)
+ endif()
+ # special case end

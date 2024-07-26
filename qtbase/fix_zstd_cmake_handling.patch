@@ -1,0 +1,13 @@
+diff --git a/cmake/FindWrapZSTD.cmake b/cmake/FindWrapZSTD.cmake
+index d088e94cc7..33ad3e55fa 100644
+--- a/cmake/FindWrapZSTD.cmake
++++ b/cmake/FindWrapZSTD.cmake
+@@ -18,8 +18,6 @@
+ # ``WrapZSTD::WrapZSTD``
+ #     The zstd library
+ 
+-find_package(zstd CONFIG QUIET)
+-
+ include(FindPackageHandleStandardArgs)
+ 
+ if(TARGET zstd::libzstd_static OR TARGET zstd::libzstd_shared)

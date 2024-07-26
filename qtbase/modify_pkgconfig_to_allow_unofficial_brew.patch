@@ -1,0 +1,13 @@
+diff --git a/cmake/QtPkgConfigHelpers.cmake b/cmake/QtPkgConfigHelpers.cmake
+index 03d0c6e774..8948f8015d 100644
+--- a/cmake/QtPkgConfigHelpers.cmake
++++ b/cmake/QtPkgConfigHelpers.cmake
+@@ -19,7 +19,7 @@ endmacro()
+ # Create a Qt6*.pc file intended for pkg-config consumption.
+ function(qt_internal_generate_pkg_config_file module)
+     # TODO: PkgConfig is supported under MSVC with pkgconf (github.com/pkgconf/pkgconf)
+-    if((NOT UNIX OR QT_FEATURE_framework)
++    if((NOT UNIX)
+         AND NOT MINGW OR CMAKE_VERSION VERSION_LESS "3.20" OR ANDROID)
+         return()
+     endif()
